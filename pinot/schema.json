@@ -1,0 +1,26 @@
+{
+  "schemaName": "weather_event",
+  "dimensionFieldSpecs": [
+    {
+      "name": "city",
+      "dataType": "STRING",
+      "singleValueField": true,
+      "defaultNullValue": null
+    }
+  ],
+  "metricFieldSpecs": [
+    {
+      "name": "temperature",
+      "dataType": "DOUBLE",
+      "defaultNullValue": 0.0
+    }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "timestamp",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:HOURS"
+    }
+  ]
+}

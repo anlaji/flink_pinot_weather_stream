@@ -1,0 +1,18 @@
+{
+  "tableName": "weather_event_REALTIME",
+  "tableType": "REALTIME",
+  "tenants": { "broker": "DefaultTenant", "server": "DefaultTenant" },
+  "segmentsConfig": {
+    "schemaName": "weather_event",
+    "timeColumnName": "timestamp",
+    "replication": "1"
+  },
+  "tableIndexConfig": { "loadMode": "MMAP" },
+  "ingestionConfig": {
+    "streamConfigs": {
+      "streamType": "kafka",
+      "stream.kafka.topic.name": "weather-events",
+      "stream.kafka.bootstrap.servers": "kafka:9092"
+    }
+  }
+}
